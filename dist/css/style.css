@@ -1,0 +1,91 @@
+
+input[type=number]{ -moz-appearance: textfield; }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.form-inline .form-group{
+	margin-bottom: 20px;
+	float: right;
+}
+.dropdown-menu{
+	z-index: 9999 !important;
+}
+.message_success{background-color: #78b310; color:#fff;padding: 5px;}
+.message_error{background-color: #e74c3c; color:#fff;padding: 5px;}
+.modal-body{
+	position: relative;
+    overflow-y: auto;
+    max-height: 100%;
+}
+@media print {
+    #print_content {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+        font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+}
+.searchTxt{
+	margin-bottom: 10px;
+}
+.success-icon{
+	font-size:5em;
+}
+.invoice-save-top{
+	margin-top:20px;height:60px;padding:20px;font-size:20px;
+}
+.invoice-save-btm{
+	height:60px;padding:20px;font-size:20px;
+}
+
+.bottom-ads{
+	padding-left:0%;
+}
+@media (min-width: 768px) {
+	.bottom-ads{
+		padding-left:9%;
+	}
+}
+.login-form {
+    background-image: url('../images/bg.jpg');
+    width: 380px;
+    margin: 1% auto;
+    padding: 20px;
+	color:white;
+}
+.demo-heading {
+	width: 600px;
+    margin: 1% auto;
+    padding: 20px;
+}
+
+.card::before{
+   width:150%;
+  height:150%;
+  display: block;
+
+  position: absolute;
+  top: -75%;
+  left: -75%;
+  
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  content: attr(data-watermark);
+
+  font-size: 18px;
+  opacity: 0.1;
+  line-height: 1em;
+  letter-spacing: 2px;
+  color: #000;
+}
