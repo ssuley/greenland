@@ -66,8 +66,14 @@ class AlaminInvoiceController extends Controller
          if(!empty($request->input('transport'))){
             $invoice->transport=$request->input('transport');
         }
+         else{
+            $invoice->transport=0;
+        }
          if(!empty($request->input('insurence'))){
             $invoice->insurence=$request->input('insurence');
+        }
+        else{
+            $invoice->insurence=0;
         }
         if(!empty($request->input('pobox'))){
             $invoice->pobox=$request->input('pobox');
@@ -179,8 +185,14 @@ class AlaminInvoiceController extends Controller
          if(!empty($request->input('transport'))){
             $invoice->transport=$request->input('transport');
         }
+         else{
+            $invoice->transport=0;
+        }
          if(!empty($request->input('insurence'))){
             $invoice->insurence=$request->input('insurence');
+        }
+        else{
+            $invoice->insurence=0;
         }
         if(!empty($request->input('pobox'))){
             $invoice->pobox=$request->input('pobox');
