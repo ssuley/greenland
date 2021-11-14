@@ -29,8 +29,8 @@
                     </div> 
                 
                 <div class="form-group">
-                        <textarea class="form-control @error('insurence') is-invalid @enderror" rows="2" name="insurence" id="insurence" value="{{ old('insurence') }}" placeholder="insurence cost" required></textarea>
-                        @error('insurence')
+                        <textarea class="form-control @error('insurance') is-invalid @enderror" rows="2" name="insurance" id="insurance" value="{{ old('insurance') }}" placeholder="insurance cost" required></textarea>
+                        @error('insurance')
                          <span class="invalid-feedback text-danger" role="alert">
                         <strong>{{ $message }}</strong>
                             </span>

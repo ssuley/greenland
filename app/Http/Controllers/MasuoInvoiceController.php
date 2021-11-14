@@ -69,11 +69,11 @@ class masuoInvoiceController extends Controller
         else{
             $invoice->transport=0;
         }
-         if(!empty($request->input('insurence'))){
-            $invoice->insurence=$request->input('insurence');
+         if(!empty($request->input('insurance'))){
+            $invoice->insurance=$request->input('insurance');
         }
         else{
-             $invoice->insurence=0;
+             $invoice->insurance=0;
         }
         if(!empty($request->input('pobox'))){
             $invoice->pobox=$request->input('pobox');
@@ -188,11 +188,11 @@ class masuoInvoiceController extends Controller
         else{
             $invoice->transport=0;
         }
-         if(!empty($request->input('insurence'))){
-            $invoice->insurence=$request->input('insurence');
+         if(!empty($request->input('insurance'))){
+            $invoice->insurance=$request->input('insurance');
         }
         else{
-             $invoice->insurence=0;
+             $invoice->insurance=0;
         }
         if(!empty($request->input('pobox'))){
             $invoice->pobox=$request->input('pobox');
