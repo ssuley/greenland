@@ -16,7 +16,7 @@ class user_seed_info extends Seeder
         DB::table('users')->delete();
         $admin = User::create([
             'id' => 1,
-            'name' => 'greenland',
+            'name' => 'Administrator',
             'email' => 'admin@admin.com',
             'password' => Hash::make('12345678')
         ]);

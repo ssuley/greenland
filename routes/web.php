@@ -16,6 +16,18 @@ Route::group(['middleware' => 'prevent-back-history'],function(){
 
     Route::get('/', 'HomeController@index')->name('home');
 
+//============ Account route ============
+     Route::resource('account', 'AccountController', [
+        'names' => [
+            'index' => 'account',
+            'create' => 'new-account',
+            'store'  =>'insert-account',
+            'edit'   =>'edit-account',
+            'update'   =>'update-account',
+            'destroy'   =>'delete-account'
+            // etc...
+            ]
+        ]);
 //============ Invoice route ============
     Route::resource('invoice', 'InvoiceController', [
         'names' => [

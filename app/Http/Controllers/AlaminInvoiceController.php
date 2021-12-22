@@ -59,7 +59,8 @@ class AlaminInvoiceController extends Controller
         ]);
         //dd($request->input('productName'));
         $invoice= new alamin_invoice();
-        $invoice->user_id=1;
+         $user_id=auth()->user()->id;
+        $invoice->user_id=$user_id;
         $invoice->companyName=$request->input('companyName');
         $invoice->address=$request->input('address');
         $invoice->city=$request->input('city');

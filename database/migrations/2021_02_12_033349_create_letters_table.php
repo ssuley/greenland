@@ -14,7 +14,7 @@ class CreateLettersTable extends Migration
     public function up()
     {
         Schema::create('letters', function (Blueprint $table) {
-            $table->bigIncrements('letter_id');
+            $table->bigIncrements('letter_id')->primary()->uniqid();
             $table->longText('description');
             $table->timestamps();
         });

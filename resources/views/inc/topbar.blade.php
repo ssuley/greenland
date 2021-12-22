@@ -12,6 +12,11 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
+                 <?php
+                $id=auth()->user()->id;
+                $role_name=DB::select("SELECT name FROM roles INNER JOIN model_has_roles ON roles.id=model_has_roles.role_id where model_has_roles.model_id='$id'");
+                ?>
+              <span class="text-center"><strong>{{ auth()->user()->name }}- ( {{ $role_name[0]->name }} )</strong></span>
                 {{-- <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>

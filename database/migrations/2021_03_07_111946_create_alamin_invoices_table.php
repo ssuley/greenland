@@ -14,7 +14,7 @@ class CreateAlaminInvoicesTable extends Migration
     public function up()
     {
         Schema::create('alamin_invoices', function (Blueprint $table) {
-           $table->bigIncrements('invoice_id');
+           $table->bigIncrements('invoice_id')->primary()->uniqid();
             $table->unsignedBigInteger('user_id');
             $table->longText('companyName');
             $table->longText('address');
@@ -22,7 +22,7 @@ class CreateAlaminInvoicesTable extends Migration
             $table->longText('city');
             $table->longText('lot')->nullable();
             $table->longText('transport')->default(0);
-            $table->longText('insurence')->default(0);
+            $table->longText('insurance')->default(0);
             $table->timestamps();
         });
     }

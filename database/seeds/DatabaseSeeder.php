@@ -12,7 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
     	$this->call(user_seed_info::class);
-        $this->call(rate::class);
+        $this->call(role_seed_info::class);
+        $this->call(admin_role_info::class);
 
     }
 }

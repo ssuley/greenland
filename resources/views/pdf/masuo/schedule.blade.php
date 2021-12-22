@@ -117,12 +117,17 @@
 	</td>
 	</tr>
 	</table>
+<?php
+		$id=$invoice->user_id;
+		$role_name=DB::select("SELECT name FROM roles INNER JOIN model_has_roles ON roles.id=model_has_roles.role_id where model_has_roles.model_id='$id'");
+		$user_name=DB::select("SELECT name FROM users where id='$id'");
+	?>
 <p style="font-size:13px; float:left; font-family: Eurostile, sans-serif;" ><b>Amount in words: </b><span>{{ucfirst(Terbilang::make($grandTotal, ' shillings'))  }}</span><p><br><br> 
 
-<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>Name.......................................................................................................<span>in the capacity of...............................................................................</span></b></p>
-<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>Signature of Bidder</span></b></p>
-<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>Duly authorized to sign the bid for and on behalf of.......................................................................................................................................</span></b></p>
-<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>date on ..............................................<span>day of............................................................</span><span>20..................</span></b></p>
+<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>Name:</b>&nbsp;{{ $user_name[0]->name }}<b><span>&nbsp;&nbsp; in the capacity of</b> &nbsp;{{ $role_name[0]->name }}</span></p>
+<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>Signature of Bidder....................................</span></b></p>
+<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>Duly authorized to sign the bid for and on behalf of &nbsp; Masuo General Supply</span></b></p>
+<p style="font-size:16px; font-family:Eurostile, sans-serif;"><b>date on</b> &nbsp;{{ date('d/m', strtotime($invoice->created_at)) }}&nbsp;<span><b>day of &nbsp;</b> {{ date('l', strtotime($invoice->created_at)) }} </span><span>&nbsp;{{ date('Y', strtotime($invoice->created_at)) }}</span></b></p>
 </div>
 </section>
 

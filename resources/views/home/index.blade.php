@@ -42,7 +42,7 @@
                                     <i class="fa fa-dollar fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div >${{$rate[0]->rate}}</div>
+                                    <div >0</div>
                                 <br>
                                     <div>Dollar Rate</div>
                                 </div>

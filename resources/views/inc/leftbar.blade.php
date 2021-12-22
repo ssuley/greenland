@@ -5,7 +5,21 @@
                         <li>
                             <a href="{{route('home')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        
+                        @if(auth()->user()->hasrole('admin|General Manager'))
+                          <li>
+                            <a href="#"><i class="fa fa-users"></i> User Management<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route('new-account') }}"><i class="fa fa-plus"></i> Create User</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('account') }}"><i class="fa fa-list"></i> List User</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        @endif
+                        @if(!auth()->user()->hasrole('admin'))
                         <li>
                             <a href="#"><i class="fa fa-book"></i> Al-Amin Management<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -66,6 +80,7 @@
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        @endif
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

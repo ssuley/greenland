@@ -14,7 +14,7 @@ class CreateMeridianInvoicesTable extends Migration
     public function up()
     {
         Schema::create('meridian_invoices', function (Blueprint $table) {
-            $table->bigIncrements('invoice_id');
+            $table->bigIncrements('invoice_id')->primary()->uniqid();
             $table->unsignedBigInteger('user_id');
             $table->longText('companyName');
             $table->longText('address');
